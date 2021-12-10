@@ -1,0 +1,10 @@
+   ttpd -y
+yum install stress -y
+instance_id=$(curl http://169.254.169.254/latest/meta-data/instance-id)
+az=$(curl http://169.254.169.254/latest/meta-data/placement/availability-zone)
+echo "<html><h1>Jai bhim movie portraits india's picture in 90s,INSTANCE 1A<h1>This server is on <strong>${instance_id}</strong> under the zone <strong>${az}</strong></html>" > /var/www/html/index.html
+service httpd start
+chkconfig httpd on
+
+
+pm
